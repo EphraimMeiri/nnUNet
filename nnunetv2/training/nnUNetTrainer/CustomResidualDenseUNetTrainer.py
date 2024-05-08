@@ -51,7 +51,7 @@ class CustomResidualDenseUNetTrainer(nnUNetTrainer):
                                          strides=configuration_manager.pool_op_kernel_sizes,
                                          num_classes=label_manager.num_segmentation_heads,
                                          deep_supervision=enable_deep_supervision,
-                                         dense_blocks_per_stage=configuration_manager.dense_blocks_per_stage,
+                                         dense_blocks_per_stage=configuration_manager.conv_blocks_per_stage,
                                          **configuration_manager.__dict__)
 
         return model
